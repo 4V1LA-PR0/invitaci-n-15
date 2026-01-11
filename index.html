@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación a mis 15</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- SOBRE -->
+<div class="sobre" id="sobre">
+  <button onclick="abrirInvitacion()">💌 Abrir</button>
+</div>
+
+<!-- INVITACIÓN -->
+<section class="principal">
+  <h1>Invitación a mis 15</h1>
+  <p>
+    Con mucha alegría quiero invitarte a celebrar conmigo uno de los días
+    más importantes de mi vida, una noche llena de magia, amor y momentos
+    inolvidables.
+  </p>
+</section>
+
+<!-- CONTADOR -->
+<section class="card">
+  <h2>Faltan</h2>
+  <div id="contador" class="contador"></div>
+</section>
+
+<!-- RECEPCIÓN -->
+<section class="card">
+  <h2>Recepción</h2>
+  <p><strong>Fecha:</strong> 31 de enero de 2026</p>
+  <p><strong>Hora:</strong> 6:00 PM</p>
+  <p><strong>Lugar:</strong> Salón de Eventos Ejemplo</p>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="card">
+  <h2>Ubicación</h2>
+  <iframe
+    src="https://www.google.com/maps?q=Honduras&output=embed"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- REGLAS -->
+<section class="card">
+  <h2>Reglas</h2>
+  <ul>
+    <li>Vestimenta formal</li>
+    <li>No niños pequeños</li>
+    <li>Puntualidad</li>
+    <li>Confirmar asistencia</li>
+  </ul>
+</section>
+
+<!-- ASISTENCIA -->
+<section class="card">
+  <h2>Confirmar Asistencia</h2>
+  <form onsubmit="enviarAsistencia(event)">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+    <select id="asistencia" required>
+      <option value="">¿Asistirás?</option>
+      <option value="Sí asistiré">Sí asistiré</option>
+      <option value="No asistiré">No asistiré</option>
+    </select>
+
+    <textarea id="razon" placeholder="Si no asistes, dinos el motivo"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

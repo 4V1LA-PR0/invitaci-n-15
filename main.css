@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f7c6d0, #fde2e4);
+  text-align: center;
+  color: #4a2c2a;
+}
+
+/* SOBRE */
+.sobre {
+  position: fixed;
+  inset: 0;
+  background: #f4b6c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.sobre button {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  cursor: pointer;
+}
+
+/* SECCIONES */
+.principal {
+  padding: 50px 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contador {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* MAPA */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* FORMULARIO */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px;
+  background: #f4b6c2;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/* =========================
+   AJUSTES PARA CELULARES
+   ========================= */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .principal {
+    padding: 30px 15px;
+  }
+
+  .principal p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .card {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .contador {
+    font-size: 1.6rem;
+  }
+
+  .sobre button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+
+  iframe {
+    height: 220px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 1rem;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
