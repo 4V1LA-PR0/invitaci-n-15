@@ -20,22 +20,26 @@ setInterval(() => {
 
 // ASISTENCIA
 function enviarAsistencia(e) {
-  e.preventDefault();
+  e.preventDefault(); // ❌ Muy importante: evita que recargue la página
 
   const nombre = document.getElementById("nombre").value;
   const asistencia = document.getElementById("asistencia").value;
   const razon = document.getElementById("razon").value;
 
-  const telefono = "50488566327"; // <-- TU número con código país
+  const telefono = "50498765432"; // Tu número de WhatsApp sin + ni espacios
 
-  let mensaje = `Confirmación de asistencia:%0A`;
-  mensaje += `Nombre: ${nombre}%0A`;
-  mensaje += `Respuesta: ${asistencia}%0A`;
+  // Solo enviar WhatsApp si NO asistirá
+  if(asistencia === "No asistiré"){
+      let mensaje = `Confirmación de asistencia:%0A`;
+      mensaje += `Nombre: ${nombre}%0A`;
+      mensaje += `Respuesta: ${asistencia}%0A`;
+      mensaje += `Motivo: ${razon}`;
 
-  if (asistencia === "No asistiré") {
-    mensaje += `Motivo: ${razon}`;
+      const url = `https://wa.me/${telefono}?text=${mensaje}`;
+      window.open(url, "_blank");
+  } else {
+      // Si dice sí, solo mostramos alerta o mensaje bonito
+      alert(`Gracias ${nombre}, nos vemos en la fiesta 🎉`);
   }
-
-  const url = `https://wa.me/${telefono}?text=${mensaje}`;
-  window.open(url, "_blank");
 }
+
