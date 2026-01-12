@@ -3,7 +3,7 @@ function abrirInvitacion() {
 }
 
 // FECHA DEL EVENTO
-const fechaEvento = new Date("2026-07-20T18:00:00").getTime();
+const fechaEvento = new Date("2026-01-31T19:00:00").getTime();
 
 setInterval(() => {
   const ahora = new Date().getTime();
@@ -46,4 +46,17 @@ function enviarAsistencia(e) {
     }, function(error) {
       alert("Error al enviar: " + error.text);
     });
+}
+
+// TOGGLE PARA REGLAS
+function toggleReglas() {
+  const content = document.getElementById("reglas-content");
+  const btn = document.getElementById("toggle-btn");
+  if (content.classList.contains("expanded")) {
+    content.classList.remove("expanded");
+    btn.textContent = "Ver más";
+  } else {
+    content.classList.add("expanded");
+    btn.textContent = "Ver menos";
+  }
 }

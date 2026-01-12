@@ -1,16 +1,31 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f7c6d0, #fde2e4);
+  background-image: url('https://res.cloudinary.com/dhpq4rjad/image/upload/v1768186366/descarga_5_hufwuu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center;
   color: #4a2c2a;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: gold;
+
+
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 /* SOBRE */
 .sobre {
   position: fixed;
   inset: 0;
-  background: #f4b6c2;
+  background: #402f49;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +47,7 @@ body {
 }
 
 .card {
-  background: white;
+  background: #a080b2e2;
   border-radius: 20px;
   padding: 25px;
   margin: 25px auto;
@@ -41,8 +56,18 @@ body {
 }
 
 .contador {
-  font-size: 2rem;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
   font-weight: bold;
+  margin: 20px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border: 5px solid #f4b6c2;
 }
 
 /* MAPA */
@@ -104,7 +129,9 @@ form button {
   }
 
   .contador {
-    font-size: 1.6rem;
+    width: 200px;
+    height: 200px;
+    font-size: 1.4rem;
   }
 
   .sobre button {
@@ -126,4 +153,29 @@ form button {
     width: 100%;
     font-size: 1.1rem;
   }
+}
+
+/* TOGGLE PARA REGLAS */
+.reglas-content {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.reglas-content.expanded {
+  display: block;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background: #f4b6c2;
+  color: white;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.toggle-btn:hover {
+  background: #e8a5b0;
 }

@@ -27,13 +27,14 @@
 <section class="card">
   <h2>Faltan</h2>
   <div id="contador" class="contador"></div>
+  <div id="hora-actual" style="margin-top: 10px; font-size: 1.2rem;"></div>
 </section>
 
 <!-- RECEPCIÓN -->
 <section class="card">
   <h2>Recepción</h2>
   <p><strong>Fecha:</strong> 31 de enero de 2026</p>
-  <p><strong>Hora:</strong> 6:00 PM</p>
+  <p><strong>Hora:</strong> 7:00 PM</p>
   <p><strong>Lugar:</strong> Salón de Eventos Ejemplo</p>
 </section>
 
@@ -49,14 +50,26 @@
 
 <!-- REGLAS -->
 <section class="card">
-  <h2>Reglas</h2>
-  <ul>
-    <li>Vestimenta formal</li>
-    <li>No niños pequeños</li>
-    <li>Puntualidad</li>
-    <li>Confirmar asistencia</li>
-  </ul>
+  <h2>Vestimenta</h2>
+  <button onclick="toggleReglas()" id="toggle-btn" class="toggle-btn">Ver más</button>
+
+  <div id="reglas-content" class="reglas-content">
+    <p>Vestimenta formal</p>
+    <strong>Hombres</strong>
+    <p>Traje completo o camisa de vestir de manga larga (si tienen)</p>
+
+    <strong>Mujeres</strong>
+    <p>Vestido elegante o pantalon de vestir acompañado de blusa de vestir (si tienen)</p>
+    
+    <strong>Colores</strong>
+    <p>No se permite el uso de prendas en tonos morado, lila, ni colores similares</p>
+  </div>
 </section>
+
+
+
+
+
 
 <!-- ASISTENCIA -->
 <section class="card">
