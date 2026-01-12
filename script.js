@@ -26,17 +26,24 @@ function enviarAsistencia(e) {
   const asistencia = document.getElementById("asistencia").value;
   const razon = document.getElementById("razon").value;
 
-  fetch("https://script.google.com/macros/s/AKfycby4EQcxdhKWVCT6Uf8EI8YeJLjeChiCoIujBmjXvm4Ve4o_WnX3Q7qU9QVAgZDgAklGRw/exec", {
-    method: "POST",
-    body: JSON.stringify({ nombre, asistencia, razon }),
-    headers: { "Content-Type": "application/json" }
-  })
-  .then(response => response.json())
-  .then(data => {
-    alert("¡Gracias por confirmar tu asistencia!");
-    document.getElementById("nombre").value = "";
-    document.getElementById("asistencia").value = "";
-    document.getElementById("razon").value = "";
-  })
-  .catch(err => console.error(err));
+  // Inicializar EmailJS (reemplaza con tu clave pública)
+  emailjs.init("TU_CLAVE_PUBLICA_AQUI");
+
+  // Parámetros para el template de email
+  const templateParams = {
+    from_name: nombre,
+    asistencia: asistencia,
+    razon: razon
+  };
+
+  // Enviar email (reemplaza con tu service ID y template ID)
+  emailjs.send("TU_SERVICE_ID_AQUI", "TU_TEMPLATE_ID_AQUI", templateParams)
+    .then(function(response) {
+      alert("¡Gracias por confirmar tu asistencia! Se ha enviado un email al administrador.");
+      document.getElementById("nombre").value = "";
+      document.getElementById("asistencia").value = "";
+      document.getElementById("razon").value = "";
+    }, function(error) {
+      alert("Error al enviar: " + error.text);
+    });
 }
